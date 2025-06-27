@@ -30,7 +30,7 @@ You move, **Gesty understands.**
 ### 🛠 How to Run
 
 ```bash
-git clone https://github.com/your-username/gesty.git
+git clone https://github.com/mekhushi/gesty.git
 cd gesty
 pip install -r requirements.txt
 python main.py
