@@ -6,13 +6,12 @@ def detect_gesture(landmarks):
 
     finger_states = []
 
-    # Thumb detection using angle + height
     if is_thumb_up(landmarks):
         finger_states.append(1)
     else:
         finger_states.append(0)
 
-    # Index, middle, ring, pinky with relaxed margin
+    
     for tip_id in [8, 12, 16, 20]:
         tip = landmarks.landmark[tip_id]
         pip = landmarks.landmark[tip_id - 2]
@@ -20,7 +19,7 @@ def detect_gesture(landmarks):
 
     print("🧠 Finger States:", finger_states)
 
-    # Gesture classification
+   
     if finger_states == [1, 0, 0, 0, 0]:
         return "thumbs_up"
     elif finger_states == [0, 0, 0, 0, 0]:
